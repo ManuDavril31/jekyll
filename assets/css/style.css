@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+#pdf-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#pdf-container {
+  position: relative;
+  display: inline-block;
+}
+
+canvas {
+  display: block;
+  border: 1px solid #ccc;
+}
+
+aside {
+  order: 1;
+  position: sticky;
+  top: 20px;
+  flex: 0 0 50px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  z-index: 5000;
+  margin: auto;
+}
+
+article {
+  order: 2;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  gap: 40px;
+  padding: 0 20px;
+  flex-direction: column;
+}
+
+.dynamic-input {
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  border: none;
+  background: none;
+  outline: none;
+  min-width: 50px;
+  cursor: move;
+  padding: 4px;
+  background-color: rgba(173, 170, 170, 0.454);
+}
+
+.dynamic-input:focus {
+  border: 0.1px solid #6a6a6a;
+}
+
+.hidden-span {
+  visibility: hidden;
+  position: absolute;
+  white-space: pre;
+}

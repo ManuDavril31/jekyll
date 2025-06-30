@@ -4,4 +4,51 @@ my_number: 5
 title: Home
 ---
 
-<h1>{{ "HELLO WORLD" | downcase }} {{page.my_number}}</h1>
+<!-- INICIO INTEGRACIÓN FORMATO -->
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<script src="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+<div class="container">
+  <article>
+    <div id="pdf-wrapper">
+      <div id="pdf-container"></div>
+    </div>
+  </article>
+  <aside>
+    <div id="input-container">
+      <input type="file" id="fileInput" accept="application/pdf" />
+      <br />
+      <br />
+      <button onclick="crearCampo()">
+        <i
+          class="fa fa-text-height"
+          aria-hidden="true"
+          style="font-size: 25px"
+          title="Agregar texto"
+        ></i>
+      </button>
+      <button onclick="descargarPDF()">
+        <i
+          class="fa fa-download"
+          aria-hidden="true"
+          style="font-size: 25px"
+          title="descargar PDF"
+        ></i>
+      </button>
+    </div>
+  </aside>
+</div>
+<script src="/assets/js/main.js"></script>
+<script>
+  // Cargar PDF por defecto al iniciar la página principal
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof cargarPDFPorDefecto === "function") {
+      cargarPDFPorDefecto("/assets/pdf/documento.pdf");
+    }
+  });
+</script>
+<!-- FIN INTEGRACIÓN FORMATO -->

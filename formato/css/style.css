@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+/* body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+} */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+#pdf-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#pdf-container {
+  position: relative;
+  display: inline-block;
+}
+
+canvas {
+  display: block;
+  border: 1px solid #ccc;
+}
+
+/* aside {
+  max-width: 20%;
+} */
+
+/* Aside fijo */
+aside {
+  order: 1;
+  position: sticky;
+  top: 20px; /* distancia desde el top al hacer scroll */
+  flex: 0 0 50px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: fit-content; /* para que se ajuste al contenido */
+  z-index: 5000;
+  margin: auto;
+}
+
+article {
+  order: 2;
+  flex: 1 1 auto; /* que ocupe todo el espacio restante */
+  min-width: 0; /* evita problemas de overflow */
+}
+
+/* .container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  gap: 50px;
+} */
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  gap: 40px;
+  padding: 0 20px;
+  flex-direction: column;
+}
+
+.dynamic-input {
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  border: none;
+  background: none;
+  outline: none;
+  min-width: 50px;
+  cursor: move;
+  padding: 4px;
+  /* //// */
+  background-color: rgba(173, 170, 170, 0.454);
+}
+
+.dynamic-input:focus {
+  border: 0.1px solid #6a6a6a;
+}
+
+.hidden-span {
+  visibility: hidden;
+  position: absolute;
+  white-space: pre;
+}
+
+/* #input-container {
+  text-align: center;
+  margin: 20px 0;
+} */
+
+/* @media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+
+  article {
+    order: 2;
+  }
+} */
